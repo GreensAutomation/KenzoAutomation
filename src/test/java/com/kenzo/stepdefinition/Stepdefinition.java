@@ -152,10 +152,53 @@ public class Stepdefinition extends BaseClass {
 	    // Write code here that turns the phrase above into concrete actions
 	}*/
 
-	
-
 	@Then("^user confirm it navigates to the  homepage$")
 	public void user_confirm_it_navigates_to_the_homepage() throws Throwable {
 	
 	}
+	
+	@Given("^user navigates to tshirt in men option$")
+	public void user_navigates_to_tshirt_in_men_option() throws Throwable {
+		actionMethod(pom.getUh().getMen(), pom.getUh().getTshirt(), "element");
+		Thread.sleep(3000);
+		
+	}
+
+	@When("^user click on tshirt image to be booked$")
+	public void user_click_on_tshirt_image_to_be_booked() throws Throwable {
+		mouseclick(pom.getSp().getTimg());
+		Thread.sleep(3000);
+	}
+
+	@When("^user choose the quantity of the tshirt$")
+	public void user_choose_the_quantity_of_the_tshirt() throws Throwable {
+		mouseclick(pom.getPa().getColor());
+		Thread.sleep(3000);
+	}
+
+	@When("^user choose the size of the tshirt$")
+	public void user_choose_the_size_of_the_tshirt() throws Throwable {
+	mouseclick(pom.getPa().getSize());
+	Thread.sleep(3000);
+	mouseclick(pom.getPa().getSizemed());
+	Thread.sleep(3000);
+	}
+
+	@When("^user choose the addchart to hold the booking$")
+	public void user_choose_the_addchart_to_hold_the_booking() throws Throwable {
+	mouseclick(pom.getPa().getAddcart());
+	Thread.sleep(3000);
+	}
+
+	@When("^user to proceed to checkout$")
+	public void user_to_proceed_to_checkout() throws Throwable {
+	}
+
+	@Then("^user verifies selection of tshirt is done$")
+	public void user_verifies_selection_of_tshirt_is_done() throws Throwable {
+
+	
+	}
+
+
 }

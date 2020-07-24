@@ -18,4 +18,11 @@ Examples:
 |username|password|
 |lesakki24@gmail.com|India@2070|
 
-
+@login
+Scenario: user to select a producttype for booking a order 
+Given user navigates to tshirt in men option
+When user click on tshirt image to be booked
+And user choose the color of the tshirt
+And user choose the size of the tshirt
+And user choose the addchart to hold the booking
+Then user verifies selection of tshirt is done
