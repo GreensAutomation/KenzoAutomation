@@ -47,6 +47,23 @@ public class BaseClass {
 		element.sendKeys(value);
 
 	}
+	
+
+	public static boolean elementisDisplayed(WebElement element) {
+		boolean displayed = false;
+
+		try {
+			displayed = element.isDisplayed();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return displayed;
+
+	}
+
+
 
 	public static void mouseclick(WebElement element) {
 

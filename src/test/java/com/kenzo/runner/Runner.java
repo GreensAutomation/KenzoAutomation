@@ -18,7 +18,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features="src\\test\\java\\com\\kenzo\\feature",
 glue="com\\kenzo\\stepdefinition",
 plugin= {"pretty", "html:Report","com.cucumber.listener.ExtentCucumberFormatter:Report\\extentReport.html","rerun:Report/return.txt"}, 
-monochrome = true, dryRun = false, strict = true)
+tags="@login", monochrome = true, dryRun = false, strict = true)
 
 public class Runner {
 
@@ -26,7 +26,6 @@ public class Runner {
 	
 	@BeforeClass
 	public static void setup() throws IOException, InterruptedException {
-		
 		String broswerName=FileReaderManager.getInstance().getCrInstance().getBroswerName();
 		driver=BaseClass.broswerLaunch(broswerName);
 		Thread.sleep(3000);

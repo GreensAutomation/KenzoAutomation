@@ -25,13 +25,45 @@ public class HomePage
 	@FindBy(xpath = "(//span[@data-gtm-type='clickEvent'])[126]")
 	private WebElement register;
 	
+	@FindBy(xpath = "//*[@id=\"headerLoginForm\"]/div[2]")
+	private WebElement user;
+	
+
+	@FindBy(xpath = "//input[@name='email']")
+	private WebElement email;
+	
+	@FindBy(id = "pwd")
+	private WebElement password;
+	
+	
+	@FindBy(id="loginForm")
+	private WebElement loginbutton;
 	
 	public WebElement getLogin() {
 		return login;
 	}
 
+	public WebElement getUser() {
+		return user;
+	}
+
 	public WebElement getRegister() {
 		return register;
 	}
+
+	public WebElement getEmail() {
+		return email;
+	}
+
+	public WebElement getPassword() {
+		return password;
+	}
+
+	public WebElement getLoginbutton() {
+		return loginbutton;
+	}
+
+
+	
 	
 }

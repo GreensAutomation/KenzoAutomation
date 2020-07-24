@@ -6,72 +6,160 @@ formatter.feature({
   "id": "testing-logical-functionality-of-placing-the-order-of-a-product-and-returing-of-the-product",
   "keyword": "Feature"
 });
-formatter.scenario({
-  "line": 3,
-  "name": "user registering for new user profile",
+formatter.scenarioOutline({
+  "line": 11,
+  "name": "user checking the login function using valid username and valid password",
   "description": "",
-  "id": "testing-logical-functionality-of-placing-the-order-of-a-product-and-returing-of-the-product;user-registering-for-new-user-profile",
-  "type": "scenario",
-  "keyword": "Scenario"
+  "id": "testing-logical-functionality-of-placing-the-order-of-a-product-and-returing-of-the-product;user-checking-the-login-function-using-valid-username-and-valid-password",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 10,
+      "name": "@login"
+    }
+  ]
 });
 formatter.step({
-  "line": 4,
+  "line": 12,
   "name": "user launch the application",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 5,
-  "name": "user initiating the registration process",
+  "line": 13,
+  "name": "user enter the valid username \"\u003cusername\u003e\" in username field",
   "keyword": "When "
 });
 formatter.step({
-  "line": 6,
-  "name": "user entering the personal details cum required fields for registration",
+  "line": 14,
+  "name": "user enter the valid password \"\u003cpassword\u003e\" in password field",
   "keyword": "And "
 });
 formatter.step({
-  "line": 7,
-  "name": "user completes the registration process",
+  "line": 15,
+  "name": "user click on login button",
   "keyword": "And "
 });
 formatter.step({
-  "line": 8,
-  "name": "user receving the user id credentials details",
+  "line": 16,
+  "name": "user confirm it navigates to the  homepage",
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 17,
+  "name": "",
+  "description": "",
+  "id": "testing-logical-functionality-of-placing-the-order-of-a-product-and-returing-of-the-product;user-checking-the-login-function-using-valid-username-and-valid-password;",
+  "rows": [
+    {
+      "cells": [
+        "username",
+        "password"
+      ],
+      "line": 18,
+      "id": "testing-logical-functionality-of-placing-the-order-of-a-product-and-returing-of-the-product;user-checking-the-login-function-using-valid-username-and-valid-password;;1"
+    },
+    {
+      "cells": [
+        "lesakki24@gmail.com",
+        "India@2070"
+      ],
+      "line": 19,
+      "id": "testing-logical-functionality-of-placing-the-order-of-a-product-and-returing-of-the-product;user-checking-the-login-function-using-valid-username-and-valid-password;;2"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.scenario({
+  "line": 19,
+  "name": "user checking the login function using valid username and valid password",
+  "description": "",
+  "id": "testing-logical-functionality-of-placing-the-order-of-a-product-and-returing-of-the-product;user-checking-the-login-function-using-valid-username-and-valid-password;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 10,
+      "name": "@login"
+    }
+  ]
+});
+formatter.step({
+  "line": 12,
+  "name": "user launch the application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 13,
+  "name": "user enter the valid username \"lesakki24@gmail.com\" in username field",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 14,
+  "name": "user enter the valid password \"India@2070\" in password field",
+  "matchedColumns": [
+    1
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 15,
+  "name": "user click on login button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 16,
+  "name": "user confirm it navigates to the  homepage",
   "keyword": "Then "
 });
 formatter.match({
   "location": "Stepdefinition.user_launch_the_application()"
 });
 formatter.result({
-  "duration": 13078172900,
+  "duration": 15013207400,
   "status": "passed"
 });
 formatter.match({
-  "location": "Stepdefinition.user_initiating_the_registration_process()"
+  "arguments": [
+    {
+      "val": "lesakki24@gmail.com",
+      "offset": 31
+    }
+  ],
+  "location": "Stepdefinition.user_enter_the_valid_username_in_username_field(String)"
 });
 formatter.result({
-  "duration": 8148802100,
+  "duration": 2030251600,
   "status": "passed"
 });
 formatter.match({
-  "location": "Stepdefinition.user_entering_the_personal_details_cum_required_fields_for_registration()"
+  "arguments": [
+    {
+      "val": "India@2070",
+      "offset": 31
+    }
+  ],
+  "location": "Stepdefinition.user_enter_the_valid_password_in_password_field(String)"
 });
 formatter.result({
-  "duration": 62743440900,
+  "duration": 713565600,
   "status": "passed"
 });
 formatter.match({
-  "location": "Stepdefinition.user_completes_the_registration_process()"
+  "location": "Stepdefinition.user_click_on_login_button()"
 });
 formatter.result({
-  "duration": 5589269700,
+  "duration": 252398499,
   "status": "passed"
 });
 formatter.match({
-  "location": "Stepdefinition.user_receving_the_user_id_credentials_details()"
+  "location": "Stepdefinition.user_confirm_it_navigates_to_the_homepage()"
 });
 formatter.result({
-  "duration": 45200,
+  "duration": 35900,
   "status": "passed"
 });
 });
